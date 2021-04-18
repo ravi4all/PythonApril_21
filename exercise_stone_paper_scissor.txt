@@ -1,0 +1,23 @@
+options = ["stone", "paper", "scissor"]
+
+cpu = random.choice(options)
+user = input("Enter your choice : ")
+
+in 5 chances, we have to find out winner
+
+cpu == user : draw
+
+user winning conditions
+user - stone	cpu - scissor
+user - paper	cpu - stone
+user - scissor	cpu - paper
+
+cpu winning conditions
+cpu - stone	user - scissor
+cpu - paper	user - stone
+cpu - scissor	user - paper
+
+user_score
+cpu_score
+
+after 5 chances, print final winner

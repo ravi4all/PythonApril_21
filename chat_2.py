@@ -15,7 +15,14 @@ while chat:
         print("Playing :",song)
         os.startfile(song)
     elif msg == "show songs":
-        pass
+        os.chdir(r"C:\Users\ASUS PC\Music")
+        songs = os.listdir()
+        for i in range(len(songs)):
+            print(i, ":", songs[i])
+        index = int(input("Enter the song number you want to play : "))
+        song = songs[index]
+        print("Playing :",song)
+        os.startfile(song)
     elif msg == "date":
         d = dt.now().date()
         print("Date is",d.strftime('%d/%m/%y, %A'))
