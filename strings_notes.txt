@@ -1,0 +1,22 @@
+Data Collections
+- Strings
+  = data could be a single letter, a word, a sentence or a paragraph
+  = represented by '...', "...", """...""", '''...'''
+  = strings are immutable (which cannot be modified)
+- List
+  = data could be a collection of int, str, float or any other type
+  = represented by []
+- Tuples
+  = similar to list, but immutable
+  = represented by ()
+- Dictionary
+  = collection of data in a key and value pair
+  = represented by {key : value}
+- Sets
+  = unique and unordered collection of data, represented by {...}
+
+
+Web Crawling
+
+
+
