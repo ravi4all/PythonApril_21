@@ -11,17 +11,27 @@ dataset = {
                 "conjuring","conjuring 2","bhootnath","aatma"]
 }
 
-user = {'hulk','dabang','thor', 'lucy', 'it', 'golmaal', 'kgf', 'bala'}
+user_1 = {'hulk','dabang','thor', 'lucy', 'it', 'golmaal', 'kgf', 'bala',
+          'ironman', 'matrix'}
+user_2 = {'hulk','kahani','raw', 'lucy', 'evil dead', 'thor', 'kgf', 'it',
+          'sultan', 'oculus'}
+
+common_movies = user_1.intersection(user_2)
+
 scores = {}
 for item in dataset:
     movies = set(dataset[item])
-    numer = user.intersection(movies)
-    denom = user.union(movies)
+    numer = common_movies.intersection(movies)
+    denom = common_movies.union(movies)
     score = len(numer) / len(denom)
     scores[item] = round(score,2)
 
 print(scores)
-
 cat = max(scores, key=scores.get)
-movies = set(dataset[cat]) - user
+
+movies = set(dataset[cat]).intersection(user_1) - user_2
 print("Rec movies are",movies)
+
+
+
+
