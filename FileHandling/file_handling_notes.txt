@@ -1,0 +1,47 @@
+File Handling
+
+Read / Write
+
+2 types of files 
+- text
+- binary => images, audio, video...
+
+3 steps for file handling
+- open
+- read/write
+- close
+
+Modes for opening a file
+If we open a text file,
+r  -  read
+w  -  write
+a  -  append
+x  -  write
+=========================
+If we open a binary file,
+rb - read binary
+wb - write binary
+ab - append binary
+xb - write binary
+
+r+
+w+
+
+read mode 
+= we cannot write a file when we open a file in read mode
+= if file do not exists, then it will raise error
+
+write mode
+= we cannot read a file when we open a file in write mode
+= if file exist then it will write the file and if file do not exist then it will create the file and then write it.
+= it will always overwrite the file.
+
+append mode
+= we cannot read a file when we open a file in append mode
+= if file exist then it will write the file and if file do not exist then it will create the file and then write it.
+= it doesn't overwrite the file, it will append the data
+
+x mode
+= we cannot read a file when we open a file in x mode
+= if file do not exist then it will create the file and then write it, if file exist then it will raise error.
+= it will always overwrite the file.
