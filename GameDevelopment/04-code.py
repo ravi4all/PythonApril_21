@@ -13,9 +13,10 @@ color_1 = (120,10,45)
 
 h, w = 50, 50
 x, y = 0, 0
-
+moveX = 1
+moveY = 1
 clock = pygame.time.Clock()
-FPS = 100
+FPS = 1000
 while True:
     for event in pygame.event.get():
         # print(event)
@@ -25,6 +26,16 @@ while True:
 
     screen.fill(white)
     pygame.draw.rect(screen, red, [x, y, w, h])
-    x += 1
+    x += moveX
+    y += moveY
+    if x > width - w:
+        moveX = -1
+    elif x < 0:
+        moveX = 1
+
+    if y > height - h:
+        moveY = -1
+    elif y < 0:
+        moveY = 1
     pygame.display.update()
     clock.tick(FPS)
